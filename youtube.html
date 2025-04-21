@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YES DOWNLOADER - Free YouTube Video Downloader. Download videos from YouTube in HD quality, MP4 format, without registration.">
+    <meta name="keywords" content="YouTube downloader, free video download, YouTube to MP4, HD video download, online YouTube converter">
+    <meta name="author" content="Nahid Ahmed">
+    <meta property="og:title" content="YES DOWNLOADER - Free YouTube Video Downloader">
+    <meta property="og:description" content="Download YouTube videos in HD quality for free">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cyberghostofficial01.github.io/YES-DOWNLOADER/youtube.html">
+    <meta property="og:image" content="https://i.ibb.co.com/W49ZVtPk/IMG-20250421-212729.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cyberghostofficial01.github.io/YES-DOWNLOADER/youtube.html">
+    
+    <title>YES DOWNLOADER - Free YouTube Video Downloader | HD Quality | MP4 Format</title>
+    
+    <!-- Preload important resources -->
+    <link rel="preload" href="https://i.ibb.co.com/W49ZVtPk/IMG-20250421-212729.png" as="image">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Structured data for rich snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "YES DOWNLOADER - YouTube Downloader",
+      "description": "Free online YouTube video downloader",
+      "url": "https://cyberghostofficial01.github.io/YES-DOWNLOADER/youtube.html",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Nahid Ahmed",
+        "url": "https://t.me/nahidahmed01"
+      }
+    }
+    </script>
+    
+    <style>
+        body {
+            background-color: black;
+            color: #04F3FA;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #111;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #04F3FA;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .back-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            color: #04F3FA;
+            transition: color 0.3s;
+        }
+
+        .back-icon:hover {
+            color: #00bcd4;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .fullscreen-iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+        
+        /* Additional content container (hidden by default) */
+        .seo-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="back-icon" onclick="goBack()" aria-label="Go back to homepage">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <h1>YES DOWNLOADER</h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <iframe
+            class="fullscreen-iframe"
+            src="https://www.clipto.com/media-downloader/youtube-downloader"
+            title="YouTube Video Downloader"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    
+    <!-- Hidden SEO content -->
+    <div class="seo-content">
+        <h2>Free YouTube Video Downloader</h2>
+        <p>YES DOWNLOADER provides fast and free YouTube video downloads in HD quality. Our YouTube downloader supports MP4 format and works on all devices without requiring registration.</p>
+        <h3>How to download YouTube videos:</h3>
+        <ol>
+            <li>Copy the YouTube video URL</li>
+            <li>Paste it in our downloader</li>
+            <li>Select your preferred quality</li>
+            <li>Download your video instantly</li>
+        </ol>
+        <p>Our service supports downloading YouTube videos in 1080p, 720p, 480p, and 360p resolutions. You can download YouTube videos without any watermarks or limitations.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function goBack() {
+            window.location.href = "https://cyberghostofficial01.github.io/YES-DOWNLOADER/";
+        }
+        
+        // Track iframe interactions
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'downloadStart') {
+                // Track download events
+                if (navigator.sendBeacon) {
+                    navigator.sendBeacon('/analytics', JSON.stringify({
+                        event: 'download',
+                        platform: 'youtube',
+                        quality: event.data.quality
+                    }));
+                }
+            }
+        });
+    </script>
+</body>
+</html>
